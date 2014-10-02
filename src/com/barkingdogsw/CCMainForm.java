@@ -1,6 +1,7 @@
 package com.barkingdogsw;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -13,6 +14,8 @@ public class CCMainForm {
     private JPanel controlPanel;
     private JTextField filePathField;
     private JButton fileChooseButton;
+    private JButton countButton;
+    private JLabel imageLabel;
 
     private String filePath;
 
@@ -42,7 +45,16 @@ public class CCMainForm {
             public void actionPerformed(ActionEvent e) {
                 JFileChooser fileChooser = new JFileChooser();
                 if (fileChooser.showOpenDialog(basePanel)==0) filePath = fileChooser.getSelectedFile().getAbsolutePath();
-                System.out.println("New file chosen: "+filePath);
+                filePathField.setText(filePath);
+                imageLabel.setIcon(new ImageIcon(ImageHandling.getImage(filePath).getScaledInstance(imagePanel.getWidth(),imagePanel.getHeight(), Image.SCALE_AREA_AVERAGING)));
+            }
+        });
+
+
+        countButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ImageHandling.countColor(filePath);
             }
         });
     }
