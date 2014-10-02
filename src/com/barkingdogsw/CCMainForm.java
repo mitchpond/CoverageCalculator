@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
 
 /**
  * Created by 126668 on 10/2/2014.
@@ -44,9 +45,12 @@ public class CCMainForm {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFileChooser fileChooser = new JFileChooser();
+                BufferedImage img;
                 if (fileChooser.showOpenDialog(basePanel)==0) filePath = fileChooser.getSelectedFile().getAbsolutePath();
                 filePathField.setText(filePath);
-                imageLabel.setIcon(new ImageIcon(ImageHandling.getImage(filePath).getScaledInstance(imagePanel.getWidth(),imagePanel.getHeight(), Image.SCALE_AREA_AVERAGING)));
+                img = ImageHandling.getImage(filePath);
+                imageLabel.setIcon(new ImageIcon(img.getScaledInstance(imagePanel.getWidth(),imagePanel.getHeight(), Image.SCALE_DEFAULT)));
+                ImageHandling.countColors(img);
             }
         });
 
@@ -54,7 +58,7 @@ public class CCMainForm {
         countButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ImageHandling.countColor(filePath);
+                //ImageHandling.countColors(filePath);
             }
         });
     }
