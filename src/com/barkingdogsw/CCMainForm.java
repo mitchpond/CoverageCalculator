@@ -53,7 +53,7 @@ public class CCMainForm {
                 filePathField.setText(filePath);
                 if (filePath.endsWith(".pdf")) img = PDFHandler.renderPDF(filePath);
                 else img = ImageHandling.getImage(filePath);
-                imageLabel.setIcon(new ImageIcon(img.getScaledInstance(imagePanel.getWidth(),imagePanel.getHeight(), Image.SCALE_DEFAULT)));
+                imageLabel.setIcon(new ImageIcon(img.getScaledInstance(-1,imagePanel.getHeight(), Image.SCALE_SMOOTH)));
                 ImageHandling.countColors(img);
             }
         });

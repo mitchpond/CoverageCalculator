@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b5ae603-e426-4a3c-84ee-b715979add97" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/barkingdogsw/PDFHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_apache_pdfbox_pdfbox_1_8_7.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/barkingdogsw/CCMainForm.java" afterPath="$PROJECT_DIR$/src/com/barkingdogsw/CCMainForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CoverageCalculator.iml" afterPath="$PROJECT_DIR$/CoverageCalculator.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/barkingdogsw/ImageHandling.java" afterPath="$PROJECT_DIR$/src/com/barkingdogsw/ImageHandling.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/barkingdogsw/PDFHandler.java" afterPath="$PROJECT_DIR$/src/com/barkingdogsw/PDFHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CoverageCalculator.iws" />
@@ -30,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CCMainForm.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="CCMainForm.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/barkingdogsw/CCMainForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="1258">
-              <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.48979592" vertical-offset="511" max-vertical-offset="1258">
+              <caret line="55" column="116" selection-start-line="55" selection-start-column="116" selection-end-line="55" selection-end-column="116" />
               <folding />
             </state>
           </provider>
@@ -43,22 +41,25 @@
       <file leaf-file-name="PDFHandler.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/barkingdogsw/PDFHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+              <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageHandling.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ImageHandling.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/barkingdogsw/ImageHandling.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14237855" vertical-offset="0" max-vertical-offset="782">
-              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="816">
+              <caret line="47" column="65" selection-start-line="47" selection-start-column="65" selection-end-line="47" selection-end-column="65" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="method#getImage#0;class#ImageHandling#0" expanded="false" />
                 <element signature="method#getImageBytes#0;class#ImageHandling#0" expanded="false" />
-                <element signature="e#826#843#0" expanded="true" />
+                <element signature="e#848#865#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,8 +95,8 @@
         <option value="$PROJECT_DIR$/src/com/barkingdogsw/Main.java" />
         <option value="$PROJECT_DIR$/src/com/barkingdogsw/PixelCount.java" />
         <option value="$PROJECT_DIR$/src/com/barkingdogsw/CCMainForm.form" />
-        <option value="$PROJECT_DIR$/src/com/barkingdogsw/ImageHandling.java" />
         <option value="$PROJECT_DIR$/src/com/barkingdogsw/PDFHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/barkingdogsw/ImageHandling.java" />
         <option value="$PROJECT_DIR$/src/com/barkingdogsw/CCMainForm.java" />
       </list>
     </option>
@@ -381,7 +382,11 @@
       <created>1412287478482</created>
       <updated>1412287478482</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Playing around with PDF support">
+      <created>1412628012755</created>
+      <updated>1412628012755</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -396,17 +401,17 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39979124" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32939914" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3390558" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14895834" sideWeight="0.5016234" order="0" side_tool="true" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3390558" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3390558" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" x="94" y="94" width="1732" height="862" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -458,9 +463,10 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#getImage#0;class#ImageHandling#0" expanded="false" />
             <element signature="method#getImageBytes#0;class#ImageHandling#0" expanded="false" />
-            <element signature="e#826#843#0" expanded="true" />
+            <element signature="e#848#865#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -483,9 +489,10 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="850">
           <caret line="44" column="67" selection-start-line="44" selection-start-column="67" selection-end-line="44" selection-end-column="67" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#getImage#0;class#ImageHandling#0" expanded="false" />
             <element signature="method#getImageBytes#0;class#ImageHandling#0" expanded="false" />
-            <element signature="e#826#843#0" expanded="true" />
+            <element signature="e#848#865#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -508,9 +515,10 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="663">
           <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#getImage#0;class#ImageHandling#0" expanded="false" />
             <element signature="method#getImageBytes#0;class#ImageHandling#0" expanded="false" />
-            <element signature="e#826#843#0" expanded="true" />
+            <element signature="e#848#865#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -601,31 +609,34 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/barkingdogsw/CCMainForm.java">
+    <entry file="file://$PROJECT_DIR$/src/com/barkingdogsw/ImageHandling.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="1258">
-          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="816">
+          <caret line="47" column="65" selection-start-line="47" selection-start-column="65" selection-end-line="47" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getImage#0;class#ImageHandling#0" expanded="false" />
+            <element signature="method#getImageBytes#0;class#ImageHandling#0" expanded="false" />
+            <element signature="e#848#865#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/barkingdogsw/PDFHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/barkingdogsw/ImageHandling.java">
+    <entry file="file://$PROJECT_DIR$/src/com/barkingdogsw/CCMainForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14237855" vertical-offset="0" max-vertical-offset="782">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-          <folding>
-            <element signature="method#getImage#0;class#ImageHandling#0" expanded="false" />
-            <element signature="method#getImageBytes#0;class#ImageHandling#0" expanded="false" />
-            <element signature="e#826#843#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.48979592" vertical-offset="511" max-vertical-offset="1258">
+          <caret line="55" column="116" selection-start-line="55" selection-start-column="116" selection-end-line="55" selection-end-column="116" />
+          <folding />
         </state>
       </provider>
     </entry>
