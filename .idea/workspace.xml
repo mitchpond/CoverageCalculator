@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b5ae603-e426-4a3c-84ee-b715979add97" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/barkingdogsw/CCMainForm.java" afterPath="$PROJECT_DIR$/src/com/barkingdogsw/CCMainForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/barkingdogsw/ImageHandling.java" afterPath="$PROJECT_DIR$/src/com/barkingdogsw/ImageHandling.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/barkingdogsw/PDFHandler.java" afterPath="$PROJECT_DIR$/src/com/barkingdogsw/PDFHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CoverageCalculator.iws" />
@@ -386,7 +383,11 @@
       <created>1412628012755</created>
       <updated>1412628012755</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Preliminary color percentage reporting">
+      <created>1412632878106</created>
+      <updated>1412632878106</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -440,7 +441,8 @@
     <MESSAGE value="starting to play around with image loading. still not sure of needed functionality" />
     <MESSAGE value="n/a" />
     <MESSAGE value="Playing around with PDF support" />
-    <option name="LAST_COMMIT_MESSAGE" value="Playing around with PDF support" />
+    <MESSAGE value="Preliminary color percentage reporting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Preliminary color percentage reporting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
