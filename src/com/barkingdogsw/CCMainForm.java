@@ -4,10 +4,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
 /**
- * Created by 126668 on 10/2/2014.
+ * Created by Mitch Pond on 10/2/2014.
  */
 public class CCMainForm {
     private JPanel basePanel;
@@ -17,13 +19,14 @@ public class CCMainForm {
     private JButton fileChooseButton;
     private JButton countButton;
     private JLabel imageLabel;
+    private Color selectedColor;
 
     private String filePath;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("CCMainForm");
         frame.setContentPane(new CCMainForm().basePanel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
     }
@@ -48,7 +51,8 @@ public class CCMainForm {
                 BufferedImage img;
                 if (fileChooser.showOpenDialog(basePanel)==0) filePath = fileChooser.getSelectedFile().getAbsolutePath();
                 filePathField.setText(filePath);
-                img = ImageHandling.getImage(filePath);
+                if (filePath.endsWith(".pdf")) img = PDFHandler.renderPDF(filePath);
+                else img = ImageHandling.getImage(filePath);
                 imageLabel.setIcon(new ImageIcon(img.getScaledInstance(imagePanel.getWidth(),imagePanel.getHeight(), Image.SCALE_DEFAULT)));
                 ImageHandling.countColors(img);
             }
@@ -59,6 +63,21 @@ public class CCMainForm {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //ImageHandling.countColors(filePath);
+            }
+        });
+        imageLabel.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+
+                try {
+                    Robot r = new Robot();
+                    selectedColor = r.getPixelColor(e.getXOnScreen(),e.getYOnScreen());
+                    System.out.println(Integer.toHexString(selectedColor.getRGB()));
+                } catch (AWTException e1) {
+                    e1.printStackTrace();
+                }
+
             }
         });
     }

@@ -1,17 +1,10 @@
 package com.barkingdogsw;
 
-import javafx.scene.image.*;
-
 import javax.imageio.ImageIO;
-import javax.imageio.spi.ImageReaderWriterSpi;
-import java.awt.*;
-import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferByte;
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.HashMap;
 
 /**
@@ -35,16 +28,16 @@ public class ImageHandling {
     }
 
     public static void countColors(BufferedImage img){
-        HashMap colorMap = new HashMap();
+        HashMap<String, Integer> colorMap = new HashMap<String, Integer>();
         int width = img.getWidth();
         int height = img.getHeight();
         int count = 0;
-        String colorToFind = "ffe62b29";
+
         for (int w = 0; w < width; w++){
             for (int h = 0; h < height; h++){
                 String out = Integer.toHexString(img.getRGB(w, h));
-                if (out.equals(colorToFind)) count++;
-                colorMap.putIfAbsent(out,null);
+                Integer colorCount = colorMap.putIfAbsent(out, 1);
+                if (colorCount != null) colorMap.put(out, colorCount + 1);
             }
         }
         System.out.println("Width: "+width);
