@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
+import java.util.Map;
 
 /**
  * Created by Mitch Pond on 10/2/2014.
@@ -14,11 +15,11 @@ import java.awt.image.BufferedImage;
 public class CCMainForm {
     private JPanel basePanel;
     private JPanel imagePanel;
-    private JPanel controlPanel;
+    private JPanel listPanel;
     private JTextField filePathField;
     private JButton fileChooseButton;
-    private JButton countButton;
     private JLabel imageLabel;
+    private JList colorList;
     private Color selectedColor;
 
     private String filePath;
@@ -53,18 +54,28 @@ public class CCMainForm {
                 filePathField.setText(filePath);
                 if (filePath.endsWith(".pdf")) img = PDFHandler.renderPDF(filePath);
                 else img = ImageHandling.getImage(filePath);
-                imageLabel.setIcon(new ImageIcon(img.getScaledInstance(-1,imagePanel.getHeight(), Image.SCALE_SMOOTH)));
-                ImageHandling.countColors(img);
+                imageLabel.setIcon(new ImageIcon(img.getScaledInstance(-1,imageLabel.getHeight(), Image.SCALE_SMOOTH)));
+                colorList.setListData(ImageHandling.countColors(img).toArray());
+                colorList.setCellRenderer(new DefaultListCellRenderer() {
+                    @Override
+                    public Component getListCellRendererComponent(
+                            JList<?> list,
+                            Object value,
+                            int index,
+                            boolean isSelected,
+                            boolean cellHasFocus)
+                    {
+                        Component renderer = super.getListCellRendererComponent(list,value,index,isSelected,cellHasFocus);
+                        renderer.setBackground(Color.decode((String) ((Map.Entry) value).getKey()));
+                        return renderer;
+                    }
+
+
+                });
             }
         });
 
 
-        countButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                //ImageHandling.countColors(filePath);
-            }
-        });
         imageLabel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {

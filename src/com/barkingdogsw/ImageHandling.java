@@ -5,8 +5,7 @@ import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferByte;
 import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by Mitch Pond on 10/2/2014.
@@ -28,26 +27,34 @@ public class ImageHandling {
         return ((DataBufferByte) img.getRaster().getDataBuffer()).getData();
     }
 
-    public static void countColors(BufferedImage img){
-        HashMap<String, Integer> colorMap = new HashMap<String, Integer>();
+    public static Set countColors(BufferedImage img){
+        Map<String, Float> colorMap = new HashMap<String, Float>();
+        Set results = new HashSet();
         int width = img.getWidth();
         int height = img.getHeight();
 
         for (int w = 0; w < width; w++){
             for (int h = 0; h < height; h++){
                 String out = Integer.toHexString(img.getRGB(w, h));
-                Integer colorCount = colorMap.putIfAbsent(out, 1);
-                if (colorCount != null) colorMap.put(out, colorCount+1);
+                out = "#"+out.substring(2);
+                Float colorCount = colorMap.putIfAbsent(out, 1f);
+                if (colorCount != null) colorMap.put(out, colorCount+1f);
             }
         }
+/*
         System.out.println("Width: "+width);
         System.out.println("Height: "+height);
         System.out.println("Total pixels: "+width*height);
         System.out.println(colorMap);
-        for (Map.Entry<String,Integer> entry : colorMap.entrySet()){
-            System.out.println(entry.getKey()+" percent: "+((float)entry.getValue()/(width*height))*100);
+*/
+        for (Map.Entry<String,Float> entry : colorMap.entrySet()){
+            float pct = (entry.getValue()/(width*height))*100;
+            entry.setValue(pct);
+            results.add(entry);
         }
-
+        return results;
 
     }
+
+
 }
